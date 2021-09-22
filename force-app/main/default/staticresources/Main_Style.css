@@ -1,0 +1,5 @@
+
+.cb-section_row > div:has( .heroHeader ) {
+    color:red !important;
+    background:blue !important;
+}

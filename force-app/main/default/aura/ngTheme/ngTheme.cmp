@@ -1,0 +1,19 @@
+<aura:component implements="forceCommunity:themeLayout" access="global" description="Sample Custom Theme Layout">
+
+<aura:attribute name="search" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="newHeader" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="compactHeader" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="themeHeader" type="Aura.Component[]" required="false"/>
+
+
+    <div class="custom-page-template">
+        <div class="compactHeader">
+            {!v.themeHeader}
+        </div>
+        <div class="mainContentArea">
+            {!v.body}
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <interviewLabel>ACC_FLOW_LAV {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>ACC_FLOW_LAV</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>secFitTowork</name>
+        <label>secFitTowork</label>
+        <locationX>70</locationX>
+        <locationY>356</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>secFitTowork_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>NeedtoAddMoreFitToWork</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Add More Fit To Work?</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>secFitTowork_Section2</name>
+            <fieldType>RegionContainer</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Add_More_Fit_to_Work</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Add More Fit to Work?</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>secFitTowork_Section3</name>
+            <fieldType>RegionContainer</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <stages>
+        <name>Declaration</name>
+        <isActive>true</isActive>
+        <label>Declaration</label>
+        <stageOrder>5</stageOrder>
+    </stages>
+    <stages>
+        <name>Diagnosis_Details</name>
+        <isActive>true</isActive>
+        <label>Diagnosis Details</label>
+        <stageOrder>3</stageOrder>
+    </stages>
+    <stages>
+        <name>Injury_Details1</name>
+        <isActive>true</isActive>
+        <label>Injury Details</label>
+        <stageOrder>2</stageOrder>
+    </stages>
+    <stages>
+        <name>Patient_Details_Stage1</name>
+        <isActive>true</isActive>
+        <label>Patient Details</label>
+        <stageOrder>1</stageOrder>
+    </stages>
+    <stages>
+        <name>Summary1</name>
+        <isActive>true</isActive>
+        <label>Summary</label>
+        <stageOrder>4</stageOrder>
+    </stages>
+    <startElementReference>secFitTowork</startElementReference>
+    <status>Draft</status>
+    <textTemplates>
+        <name>Declaration_Text</name>
+        <text>&lt;p&gt;Are you sure you want to proceed&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Div_Heading1</name>
+        <text>&lt;div class=&quot;div_heading&quot;&gt;Patient Details&lt;/div&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Div_Heading2</name>
+        <text>&lt;div class=&quot;div_heading&quot;&gt;Injury Details&lt;/div&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Div_Heading3</name>
+        <text>&lt;div class=&quot;div_heading&quot;&gt;Diagnosis Details&lt;/div&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Div_Heading4</name>
+        <text>&lt;div class=&quot;div_heading&quot;&gt;Summary&lt;/div&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Div_Heading5</name>
+        <text>&lt;div class=&quot;div_heading&quot;&gt;Declaration&lt;/div&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Left_Nav1</name>
+        <text>&lt;ol class=&quot;site_left_nav&quot;&gt;
+&lt;li class=&quot;active&quot;&gt;
+&lt;div class=&quot;slds-form-element__icon&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;slds-button slds-button_icon&quot; aria-describedby=&quot;salesforce-lightning-tooltip-bubble_6afe5d30-f0e9-dc13-9dce-dfa9df413399&quot;&gt;&lt;lightning-primitive-icon&gt;&lt;svg focusable=&quot;false&quot; data-key=&quot;info&quot; aria-hidden=&quot;true&quot; viewBox=&quot;0 0 52 52&quot; class=&quot;slds-button__icon&quot;&gt;&lt;g&gt;&lt;path d=&quot;M26 2C12.7 2 2 12.7 2 26s10.7 24 24 24 24-10.7 24-24S39.3 2 26 2zm0 12.1c1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3 1.3-3 3-3zm5 21c0 .5-.4.9-1 .9h-8c-.5 0-1-.3-1-.9v-2c0-.5.4-1.1 1-1.1.5 0 1-.3 1-.9v-4c0-.5-.4-1.1-1-1.1-.5 0-1-.3-1-.9v-2c0-.5.4-1.1 1-1.1h6c.5 0 1 .5 1 1.1v8c0 .5.4.9 1 .9.5 0 1 .5 1 1.1v2z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/lightning-primitive-icon&gt;&lt;span class=&quot;slds-assistive-text&quot;&gt;Help&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;
+Patient Details&lt;/li&gt;
+&lt;li&gt;Injury Details&lt;/li&gt;
+&lt;li&gt;Diagnosis Details&lt;/li&gt;
+&lt;li&gt;Summary&lt;/li&gt;
+&lt;li&gt;Declaration&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p class=&quot;left_nav_label&quot;&gt;Last Saved 1 Minute Ago&lt;/p&gt;
+&lt;p class=&quot;left_nav_content&quot;&gt;
+Use this form to update, add or remove diagnoses for a patient relating to an ACC Claim. All fields are required unless marked Optional.
+You can save the form at any time by using the Park this form button at the bottom of the form and come back to it later in the Parked Submissions section. Parked forms are saved for 2 weeks.
+&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Left_Nav2</name>
+        <text>&lt;div class=&quot;site_left_nav_div&quot;&gt;
+&lt;ol class=&quot;site_left_nav&quot;&gt;
+&lt;li class=&quot;success&quot;&gt;Patient Details&lt;/li&gt;
+&lt;li class=&quot;active&quot;&gt;Injury Details&lt;/li&gt;
+&lt;li&gt;Diagnosis Details&lt;/li&gt;
+&lt;li&gt;Summary&lt;/li&gt;
+&lt;li&gt;Declaration&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;p class=&quot;left_nav_label&quot;&gt;Last Saved 1 Minute Ago&lt;/p&gt;
+&lt;p class=&quot;left_nav_content&quot;&gt;
+Use this form to update, add or remove diagnoses for a patient relating to an ACC Claim. All fields are required unless marked Optional.
+You can save the form at any time by using the Park this form button at the bottom of the form and come back to it later in the Parked Submissions section. Parked forms are saved for 2 weeks.
+&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Left_Nav3</name>
+        <text>&lt;div class=&quot;site_left_nav_div&quot;&gt;
+&lt;ol class=&quot;site_left_nav&quot;&gt;
+&lt;li class=&quot;success&quot;&gt;Patient Details&lt;/li&gt;
+&lt;li class=&quot;success&quot;&gt;Injury Details&lt;/li&gt;
+&lt;li class=&quot;active&quot;&gt;Diagnosis Details&lt;/li&gt;
+&lt;li&gt;Summary&lt;/li&gt;
+&lt;li&gt;Declaration&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;p class=&quot;left_nav_label&quot;&gt;Last Saved 1 Minute Ago&lt;/p&gt;
+&lt;p class=&quot;left_nav_content&quot;&gt;
+Use this form to update, add or remove diagnoses for a patient relating to an ACC Claim. All fields are required unless marked Optional.
+You can save the form at any time by using the Park this form button at the bottom of the form and come back to it later in the Parked Submissions section. Parked forms are saved for 2 weeks.
+&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Left_Nav4</name>
+        <text>&lt;div class=&quot;site_left_nav_div&quot;&gt;
+&lt;ol class=&quot;site_left_nav&quot;&gt;
+&lt;li class=&quot;success&quot;&gt;Patient Details&lt;/li&gt;
+&lt;li class=&quot;success&quot;&gt;Injury Details&lt;/li&gt;
+&lt;li class=&quot;success&quot;&gt;Diagnosis Details&lt;/li&gt;
+&lt;li class=&quot;active&quot;&gt;Summary&lt;/li&gt;
+&lt;li&gt;Declaration&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;p class=&quot;left_nav_label&quot;&gt;Last Saved 1 Minute Ago&lt;/p&gt;
+&lt;p class=&quot;left_nav_content&quot;&gt;
+Use this form to update, add or remove diagnoses for a patient relating to an ACC Claim. All fields are required unless marked Optional.
+You can save the form at any time by using the Park this form button at the bottom of the form and come back to it later in the Parked Submissions section. Parked forms are saved for 2 weeks.
+&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Left_Nav5</name>
+        <text>&lt;div class=&quot;site_left_nav_div&quot;&gt;
+&lt;ol class=&quot;site_left_nav&quot;&gt;
+&lt;li class=&quot;success&quot;&gt;Patient Details&lt;/li&gt;
+&lt;li class=&quot;success&quot;&gt;Injury Details&lt;/li&gt;
+&lt;li class=&quot;success&quot;&gt;Diagnosis Details&lt;/li&gt;
+&lt;li class=&quot;success&quot;&gt;Summary&lt;/li&gt;
+&lt;li class=&quot;active&quot;&gt;Declaration&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;p class=&quot;left_nav_label&quot;&gt;Last Saved 1 Minute Ago&lt;/p&gt;
+&lt;p class=&quot;left_nav_content&quot;&gt;
+Use this form to update, add or remove diagnoses for a patient relating to an ACC Claim. All fields are required unless marked Optional.
+You can save the form at any time by using the Park this form button at the bottom of the form and come back to it later in the Parked Submissions section. Parked forms are saved for 2 weeks.
+&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Patient_Details_Left_Nav</name>
+        <text>&lt;ol class=&quot;site_left_nav&quot;&gt;
+&lt;li&gt;Patient Details&lt;/li&gt;
+&lt;/ol&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Summary_Detail</name>
+        <text>&lt;div class=&quot;summary_section&quot;&gt;
+   &lt;div class=&quot;sub_heading&quot;&gt;
+      Patient Details
+   &lt;/div&gt;
+
+&lt;div class=&quot;summary_content&quot;&gt;
+&lt;div class=&quot;data_label&quot;&gt; NHI Number &lt;/div&gt;
+&lt;div class=&quot;data_content&quot;&gt;{!90dc3000-c4d9-4cd1-9b7e-377095b1770a}&lt;/div&gt;
+&lt;div class=&quot;data_label&quot;&gt; Date Of Birth &lt;/div&gt;
+&lt;div class=&quot;data_content&quot;&gt;{!44236af3-72fd-4aad-92d1-7b0cf6a57a78}&lt;/div&gt;
+&lt;div class=&quot;data_label&quot;&gt; Last Name&lt;/div&gt;
+&lt;div class=&quot;data_content&quot;&gt;{!cc60272d-dd87-4841-8a9b-f173cf6acc41}&lt;/div&gt;
+&lt;div class=&quot;data_label&quot;&gt; Middle Names(s) &lt;/div&gt;
+&lt;div class=&quot;data_content&quot;&gt;{!ff72be97-19a6-450a-8610-10606e6ba21c}&lt;/div&gt;
+&lt;div class=&quot;data_label&quot;&gt; First Name &lt;/div&gt;
+&lt;div class=&quot;data_content&quot;&gt;{!7799dbbe-71f9-4040-8c5b-b35827591d6f}&lt;/div&gt;
+&lt;div class=&quot;data_label&quot;&gt; Address &lt;/div&gt;
+&lt;div class=&quot;data_content&quot;&gt;{!9d44e577-bfc3-4802-a0cd-cc53448f2605}&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;div class=&quot;sub_heading&quot;&gt;
+      Injury Details
+   &lt;/div&gt;
+&lt;div class=&quot;slds-grid slds-wrap&quot;&gt;
+  &lt;div class=&quot;slds-col slds-size_6-of-12&quot;&gt;
+    &lt;div class=&quot;data_label&quot;&gt; ACC45/Claim Number &lt;/div&gt;
+    &lt;div class=&quot;data_content&quot;&gt;{!3aa47366-4eda-43a4-9eec-ca4d07ff73ec}&lt;/div&gt;
+&lt;/div&gt;
+  &lt;div class=&quot;slds-col slds-size_6-of-12&quot;&gt;
+    &lt;div class=&quot;data_label&quot;&gt; Date Of Injury&lt;/div&gt;
+    &lt;div class=&quot;data_content&quot;&gt;{!c476a6d5-4f3c-4a2b-8655-3cdaa40791ea}&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;div class=&quot;sub_heading&quot;&gt;
+      Diagnosis Details
+   &lt;/div&gt;
+&lt;div class=&quot;slds-grid slds-wrap&quot;&gt;
+  &lt;div class=&quot;slds-col slds-size_6-of-12&quot;&gt;
+    &lt;div class=&quot;data_label&quot;&gt; Diagnosis Status&lt;/div&gt;
+    &lt;div class=&quot;data_content&quot;&gt;{!90dc3000-c4d9-4cd1-9b7e-377095b1770a}&lt;/div&gt;
+&lt;/div&gt;
+  &lt;div class=&quot;slds-col slds-size_6-of-12&quot;&gt;
+    &lt;div class=&quot;data_label&quot;&gt; Injury Side&lt;/div&gt;
+    &lt;div class=&quot;data_content&quot;&gt;{!90dc3000-c4d9-4cd1-9b7e-377095b1770a}&lt;/div&gt;
+  &lt;/div&gt;
+&lt;div class=&quot;slds-col slds-size_6-of-12&quot;&gt;
+    &lt;div class=&quot;data_label&quot;&gt; Primary Diagnosis?&lt;/div&gt;
+    &lt;div class=&quot;data_content&quot;&gt;{!90dc3000-c4d9-4cd1-9b7e-377095b1770a}&lt;/div&gt;
+&lt;/div&gt;
+  &lt;div class=&quot;slds-col slds-size_6-of-12&quot;&gt;
+    &lt;div class=&quot;data_label&quot;&gt; Additional Comments&lt;/div&gt;
+    &lt;div class=&quot;data_content&quot;&gt;{!90dc3000-c4d9-4cd1-9b7e-377095b1770a}&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;slds-grid slds-wrap&quot;&gt;
+  &lt;div class=&quot;slds-col slds-size_6-of-12&quot;&gt;
+    &lt;div class=&quot;data_label&quot;&gt; Diagnosis Status&lt;/div&gt;
+    &lt;div class=&quot;data_content&quot;&gt;{!90dc3000-c4d9-4cd1-9b7e-377095b1770a}&lt;/div&gt;
+&lt;/div&gt;
+  &lt;div class=&quot;slds-col slds-size_6-of-12&quot;&gt;
+    &lt;div class=&quot;data_label&quot;&gt; Injury Side&lt;/div&gt;
+    &lt;div class=&quot;data_content&quot;&gt;{!90dc3000-c4d9-4cd1-9b7e-377095b1770a}&lt;/div&gt;
+  &lt;/div&gt;
+&lt;div class=&quot;slds-col slds-size_6-of-12&quot;&gt;
+    &lt;div class=&quot;data_label&quot;&gt; Primary Diagnosis?&lt;/div&gt;
+    &lt;div class=&quot;data_content&quot;&gt;{!90dc3000-c4d9-4cd1-9b7e-377095b1770a}&lt;/div&gt;
+&lt;/div&gt;
+  &lt;div class=&quot;slds-col slds-size_6-of-12&quot;&gt;
+    &lt;div class=&quot;data_label&quot;&gt; Additional Comments&lt;/div&gt;
+    &lt;div class=&quot;data_content&quot;&gt;{!90dc3000-c4d9-4cd1-9b7e-377095b1770a}&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;/div&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Summary_Form2</name>
+        <text>&lt;div class=&quot;summary_section&quot;&gt;
+   &lt;div class=&quot;sub_heading&quot;&gt;
+      Patient Details
+   &lt;/div&gt;
+
+&lt;div class=&quot;summary_content&quot;&gt;
+&lt;div class=&quot;data_label&quot;&gt; NHI Number &lt;/div&gt;
+&lt;div class=&quot;data_content&quot;&gt;{!90dc3000-c4d9-4cd1-9b7e-377095b1770a}&lt;/div&gt;
+&lt;div class=&quot;data_label&quot;&gt; Date Of Birth &lt;/div&gt;
+&lt;div class=&quot;data_content&quot;&gt;{!44236af3-72fd-4aad-92d1-7b0cf6a57a78}&lt;/div&gt;
+&lt;div class=&quot;data_label&quot;&gt; Last Name&lt;/div&gt;
+&lt;div class=&quot;data_content&quot;&gt;{!cc60272d-dd87-4841-8a9b-f173cf6acc41}&lt;/div&gt;
+&lt;div class=&quot;data_label&quot;&gt; First Name &lt;/div&gt;
+&lt;div class=&quot;data_content&quot;&gt;{!7799dbbe-71f9-4040-8c5b-b35827591d6f}&lt;/div&gt;
+&lt;hr&gt;
+&lt;/div&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>Medical_Form_Id</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Contact</objectType>
+    </variables>
+</Flow>

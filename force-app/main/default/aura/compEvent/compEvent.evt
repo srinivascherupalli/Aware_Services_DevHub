@@ -1,0 +1,4 @@
+<aura:event type="COMPONENT" description="Event to Handle Navigation">
+    <aura:attribute name="screenName" type="String"/>
+    <aura:attribute name="from" type="String" />
+</aura:event>

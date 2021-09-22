@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <h2>Page 2 Heading</h2>
+
+    <button onclick="{!c.handleBackBtnClick}">Back</button>
+</aura:component>
